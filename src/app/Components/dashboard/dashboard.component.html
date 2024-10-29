@@ -1,0 +1,127 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block sidebar">
+            <div class="position-sticky d-flex flex-column h-100">
+                <h2 class="sidebar-heading py-4 px-3">Budget</h2>
+                <ul class="nav flex-column mb-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" style="cursor: pointer;">
+                            <i class="bi bi-grid"></i> Dashboard
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile mb-3">
+                    <div class="notification-text d-flex ">
+                        <img src="https://img.freepik.com/free-photo/portrait-elegant-professional-businesswoman_23-2150917266.jpg?t=st=1730188961~exp=1730192561~hmac=6032d056df099df860cbf8b95b380ebaf0d9d38b71776f1f906034b9007c297b&w=740"
+                            alt="Profile Picture" class="profile-img ">
+                        <div class="px-2 profile-text">
+                            <p class="mb-0 profile-name">Catherine</p>
+                            <small class="profile-phone">+91 9876543210</small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mx-3">
+                    <a routerLink="/login" class="logout-link"> <i class="bi bi-box-arrow-right"></i> Log Out</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between">
+                <div class="pt-3 pb-2 ">
+                    <h3>Dashboard</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+
+                <div class="profile-icon"><i class="bi bi-list"></i></div>
+            </div>
+
+            <!-- Support Requests -->
+            <div class="notification mb-3">
+                <div class="icon-container">
+                    <i class="info-icon">i</i>
+                </div>
+                <div class="notification-text px-2">
+                    You Have <strong>32 Support Request Pending for Response</strong>
+                </div>
+                <a routerLink="/dummy" class="view-link">View</a>
+            </div>
+
+            <!-- Statistic Cards -->
+            <div class="row mb-2 mt-2">
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">Savings Account</h6>
+                            <h3>1,567</h3>
+                            <small class="card-text"> <span class="static-value">+2.36%<i
+                                        class="bi bi-arrow-up-short"></i></span> Since last month</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">Savings Account</h6>
+                            <h3>1,500</h3>
+                            <small class="card-text"> <span class="static-value">+2.36%<i
+                                        class="bi bi-arrow-up-short"></i></span> Since last month</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">Savings Account</h6>
+                            <h3>1,500</h3>
+                            <small class="card-text"> <span class="static-value">+2.36%<i
+                                        class="bi bi-arrow-up-short"></i></span> Since last month</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">Savings Account</h6>
+                            <h3>1,500</h3>
+                            <small class="card-text"> <span class="static-value">+2.36%<i
+                                        class="bi bi-arrow-up-short"></i></span> Since last month</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Active Users -->
+            <h4> <b>Recently Active Users</b></h4>
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-header">
+                        <tr>
+                            <th scope="col">User ID/Name</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Transaction Category</th>
+                            <th scope="col">Transaction Amount</th>
+                            <th scope="col">Account Type</th>
+                            <th scope="col">Balance Amount</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let values of data">
+                            <td>{{values.name}} <br><small class="text-muted">ID:{{values.id}}</small></td>
+                            <td>{{values.phone}}</td>
+                            <td>{{values.transactionType}} <br><small>{{values.transactionDetail}} </small></td>
+                            <td>{{values.amount}} </td>
+                            <td>{{values.category}}</td>
+                            <td>{{values.balance}}</td>
+                            <td><button class="btn btn-link">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+
+    </div>

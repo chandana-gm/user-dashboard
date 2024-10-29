@@ -1,0 +1,62 @@
+<div class="container-fluid vh-100">
+  <div class="row h-100">
+    <!-- Left Section -->
+    <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-cover">
+      <h1 class="position-absolute  fw-bold top-left-title">Budget</h1>
+    </div>
+
+
+    <!-- Right Section -->
+    <div class="col-lg-6 d-flex flex-column justify-content-center p-4">
+      <div class="d-flex justify-content-end align-items-center mb-3">
+        <span class="text-muted small p-3">
+          Having Trouble? <a routerLink="/dummy">Get Help</a>
+        </span>
+        <button class="btn btn-outline-secondary btn-sm">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_the_United_Kingdom_%281-1%29.svg/450px-Flag_of_the_United_Kingdom_%281-1%29.svg.png"
+            alt="flag" height="13px" width="20px">
+          Eng <i class="bi bi-caret-down-fill"></i>
+        </button>
+      </div>
+
+      <div class="w-100" style="max-width: 400px; margin: auto;">
+        <h2 class="mb-3 fw-bold">Login to Budget</h2>
+        <p class="text-muted mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <form>
+          <div class="mb-0">
+            <input type="email" class=" custom-input-upper" name="email" placeholder="johnsamuel1892@gmail.com"
+              value="johnsamuel1892@gmail.com" required />
+          </div>
+
+          <div class="mb-0 position-relative">
+            <input type="password" name="password" class=" custom-input-lower" placeholder="Password"
+              value="12345" id="passwordInput" required />
+            <div type="button" class="position-absolute end-0 top-0 mt-1 me-3" (click)="togglePasswordVisibility()">
+              <span *ngIf="!showPassword">Show</span>
+              <span *ngIf="showPassword">Hide</span>
+            </div>
+          </div>&nbsp;
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <input type="checkbox" id="keepLoggedIn" />
+              <label for="keepLoggedIn" class="ms-1">Keep me logged in</label>
+            </div>
+            <a routerLink="/dummy" class="text-decoration-none">Forgot password?</a>
+          </div>
+
+          <button type="submit" (click)="submit()" class="btn btn-primary w-100 mb-3">
+            Login
+          </button>
+
+          <p class="text-center text-muted">
+            <a routerLink="/dummy" class="text-decoration-none">Create New Account?</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
